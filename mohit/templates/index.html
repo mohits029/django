@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+
+        }
+        textarea{
+            display: flex;
+            border: 2px solid red;
+            margin: 0px auto;
+            width: 50vw;
+            height: 30vh;
+            outline: none;
+        }
+        button{
+            padding: 5px 15px;
+            margin: 10px 48%;
+        }
+        .checkboxes{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- puncatiuns remove app -->
+    <h2>Write text  below: </h2>
+
+    <form action="result" method="get">
+    
+        <textarea name="text"></textarea>
+        <div class="checkboxes">
+        <label for="removepunctution"><input type="checkbox" id="removepunctution" name="removepunch"> removepunctution</label>
+        <label for="upper"><input type="checkbox" id="upper" name="uppercase"> Uppercase</label>
+        
+    </div>
+        
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

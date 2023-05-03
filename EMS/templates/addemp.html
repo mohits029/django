@@ -1,0 +1,43 @@
+{% include 'headder.html' %}
+
+
+ <h2>{{message}}</h2>
+<form action="/add-emp/" method="POST" class="form-control">
+    {% csrf_token %}
+
+<div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Name</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" name="name" placeholder="Employee name">
+  </div>
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Contact</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" name="contact" placeholder="Mobile Number">
+  </div>
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput3" class="form-label">Salary</label>
+    <input type="text" class="form-control" id="formGroupExampleInput3" name="salary" placeholder="your salary">
+  </div>
+
+  <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="department">
+    <option selected>Select Department</option>
+    <option value="developer">Developer</option>
+    <option value="tester">Tester</option>
+    <option value="designer">Desiger</option>
+  </select>
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput4" class="form-label">Email</label>
+    <input type="Email" class="form-control" id="formGroupExampleInput4" name="email" placeholder="email address">
+  </div>
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput5" class="form-label">New Password</label>
+    <input type="password" class="form-control" id="formGroupExampleInput5" name="password" placeholder="create your password">
+  </div>
+
+  <button type="submit">Submit</button>
+
+</form>
+{% include 'footer.html' %}

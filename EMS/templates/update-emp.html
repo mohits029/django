@@ -1,0 +1,41 @@
+{% include 'headder.html' %}
+
+
+<h1>Update data </h1>
+
+ <h2>{{message}}</h2>
+<form action="/do-update-emp/{{emp_data.id}}" method="POST" class="form-control">
+    {% csrf_token %}
+
+<div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Name</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" name="name" value="{{emp_data.name}}" placeholder="Employee name">
+  </div>
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Contact</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" name="contact" value="{{emp_data.contact}}" placeholder="Mobile Number">
+  </div>
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput3" class="form-label">Salary</label>
+    <input type="text" class="form-control" id="formGroupExampleInput3" name="salary" value="{{emp_data.salary}}" placeholder="your salary">
+  </div>
+
+  <select class="form-select form-select-sm" aria-label=".form-select-sm example" value="{{emp_data.department}}" name="department">
+    <option selected>Select Department</option>
+    <option value="developer">Developer</option>
+    <option value="tester">Tester</option>
+    <option value="designer">Desiger</option>
+  </select>
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput4" class="form-label">Email</label>
+    <input type="Email" class="form-control" id="formGroupExampleInput4" name="email" value="{{emp_data.email}}" placeholder="email address">
+  </div>
+
+
+  <button type="submit">Submit</button>
+
+</form>
+{% include 'footer.html' %}

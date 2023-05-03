@@ -1,0 +1,32 @@
+{% include 'headder.html' %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Sr.</th>
+        <th scope="col">Name</th>
+        <th scope="col">contact</th>
+        <th scope="col">Department</th>
+        <th scope="col">salary</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for i in empdata %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.contact}}</td>
+        <td>{{i.department}}</td>
+        <td>{{i.salary}}</td>
+        <td><a href="/del-emp/{{i.id}}"> <button>check-in</button> </a></td>
+      </tr>
+
+      {% endfor %}
+
+      
+    </tbody>
+  </table>
+
+{% include 'footer.html' %}
